@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Happy</title>
+		<style>
+			body {
+				background-color: rgb(155, 247, 146);
+				height: calc(100vh - 100px);
+			}
+
+			.container {
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				height: 100%;
+			}
+
+			.body {
+				background-color:#ffee46;
+				width: 320px;
+				height: 320px;
+				border-radius: 50%;
+				margin: 0 auto;
+				position: relative;
+			}
+
+			.eye {
+				background-color: #3d3737;
+				height: 120px;
+				width: 60px;
+				border-radius: 50%;
+				position: absolute;
+				top: 50px;
+				animation: blink 5s infinite;
+			}
+
+			.eye.left {
+				left: 80px;
+			}
+
+			.eye.right {
+				right: 80px;
+			}
+
+			.mouth {
+				position: absolute;
+				bottom: 20px;
+				left: 80px;
+				width: 160px;
+				height: 80px;
+				background: #3d3737;
+				border-bottom-left-radius: 150px;
+				border-bottom-right-radius: 150px;
+				border-top-left-radius: 10px;
+				border-top-right-radius: 10px;
+				overflow: hidden;
+			}
+
+			.teeth-container {
+				position: relative;
+			}
+
+			.teeth {
+				width: 150px;
+				margin-left: 5px;
+				border-radius: 50px;
+				margin-top: 5px;
+				height: 20px;
+				background: #ffffff;
+			}
+
+			@keyframes blink {
+				0% {
+					top: 50px;
+					height: 120px;
+				}
+				25% {
+					top: 50px;
+					height: 120px;
+				}
+				30% {
+					top: 120px;
+					height: 0px;
+				}
+				35% {
+					top: 50px;
+					height: 120px;
+				}
+				40% {
+					top: 120px;
+					height: 0;
+				}
+				45% {
+					top: 50px;
+					height: 120px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="body">
+				<div class="eye left"></div>
+				<div class="eye right"></div>
+				<div class="mouth">
+					<div class="teeh-container">
+						<div class="teeth"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
